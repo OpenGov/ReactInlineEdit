@@ -26,6 +26,7 @@ class InlineEdit extends React.Component {
 
     startEditing() {
         this.setState({editing: true, text: this.props.text});
+        this.props.onClick();
     }
 
     finishEditing() {
@@ -94,7 +95,8 @@ InlineEdit.propTypes = {
     minLength: React.PropTypes.number,
     maxLength: React.PropTypes.number,
     validate: React.PropTypes.func,
-    element: React.PropTypes.string
+    element: React.PropTypes.string,
+    onClick: React.PropTypes.func,
 };
 
 export default InlineEdit;

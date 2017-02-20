@@ -53,6 +53,7 @@ var InlineEdit = (function (_React$Component) {
         key: "startEditing",
         value: function startEditing() {
             this.setState({ editing: true, text: this.props.text });
+            this.props.onClick();
         }
     }, {
         key: "finishEditing",
@@ -136,7 +137,8 @@ InlineEdit.propTypes = {
     minLength: _react2["default"].PropTypes.number,
     maxLength: _react2["default"].PropTypes.number,
     validate: _react2["default"].PropTypes.func,
-    element: _react2["default"].PropTypes.string
+    element: _react2["default"].PropTypes.string,
+    onClick: _react2["default"].PropTypes.func,
 };
 
 exports["default"] = InlineEdit;
